@@ -8276,6 +8276,7 @@ Prerequisites for exploitation:
 - Multiple organizations must exist in the Grafana instance
 
 - Victim must be on a different organization than the one specified in the URL",2025-07-18 08:15:28.187,Nuclei
+CVE-2025-62039,7.5,0.00042,Insertion of Sensitive Information Into Sent Data vulnerability in Ays Pro AI ChatBot with ChatGPT and Content Generator by AYS ays-chatgpt-assistant allows Retrieve Embedded Sensitive Data.This issue affects AI ChatBot with ChatGPT and Content Generator by AYS: from n/a through <= 2.6.6.,2025-11-06 16:16:10.387,Nuclei
 CVE-2025-6204,8.0,0.07613,An Improper Control of Generation of Code (Code Injection) vulnerability affecting DELMIA Apriso from Release 2020 through Release 2025 could allow an attacker to execute arbitrary code.,2025-08-04 10:15:27.800,CISA/Nuclei
 CVE-2025-6205,9.1,0.77716,A missing authorization vulnerability affecting DELMIA Apriso from Release 2020 through Release 2025 could allow an attacker to gain privileged access to the application.,2025-08-04 10:15:28.057,CISA/Nuclei
 CVE-2025-62126,0.0,0.01603,Insertion of Sensitive Information Into Sent Data vulnerability in Razvan Stanga Varnish/Nginx Proxy Caching vcaching allows Retrieve Embedded Sensitive Data.This issue affects Varnish/Nginx Proxy Caching: from n/a through <= 1.8.3.,2025-12-31 16:15:45.163,Nuclei

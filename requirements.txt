@@ -1,11 +1,4 @@
-calplot
-folium
-geopy
-ipython
-itables
-jupyter-book
-matplotlib
-numpy
-pandas
-plotly
-seaborn
+ipython>=8.0.0
+matplotlib>=3.5.0
+numpy>=1.23.0
+pandas>=1.5.0

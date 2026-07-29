@@ -8720,8 +8720,9 @@ CVE-2026-20045,8.2,0.04307,"A vulnerability in Cisco Unified Communications Mana
 
 This vulnerability is due to improper validation of user-supplied input in HTTP requests. An attacker could exploit this vulnerability by sending a sequence of crafted HTTP requests to the web-based management interface of an affected device. A successful exploit could allow the attacker to obtain user-level access to the underlying operating system and then elevate privileges to root.&nbsp;
 Note: Cisco has assigned this security advisory a Security Impact Rating (SIR) of Critical rather than High as the score indicates. The reason is that exploitation of this vulnerability could result in an attacker elevating privileges to root.",2026-01-21 17:16:08.077,CISA
-CVE-2026-20079,10.0,0.387,"A vulnerability in the web interface of Cisco Secure Firewall Management Center (FMC) Software could allow an unauthenticated, remote attacker to bypass authentication and execute script files on an affected device to obtain root access to the underlying operating system.
- This vulnerability is due to an improper system process that is created at boot time. An attacker could exploit this vulnerability by sending crafted HTTP requests to an affected device. A successful exploit could allow the attacker to execute a variety of scripts and commands that allow root access to the device.",2026-03-04 18:16:24.230,Nuclei
+CVE-2026-20079,10.0,0.387,"A vulnerability in the web interface of Cisco Secure Firewall Management Center (FMC) Software could allow an unauthenticated, remote attacker to bypass authentication and execute script files on an affected device to obtain root access to the underlying operating system.&nbsp;
+
+This vulnerability is due to an improper system process that is created at boot time. An attacker could exploit this vulnerability by sending crafted HTTP requests to an affected device. A successful exploit could allow the attacker to execute a variety of scripts and commands that allow&nbsp;root access to the device.&nbsp;",2026-03-04 18:16:24.230,Nuclei
 CVE-2026-20122,5.4,0.24585,"A vulnerability in the API of Cisco Catalyst SD-WAN Manager could allow an authenticated, remote attacker to overwrite arbitrary files on the local file system. To exploit this vulnerability, the attacker must have valid read-only credentials with API access on the affected system.
 
 This vulnerability is due to improper file handling on the API interface of an affected system. An attacker could exploit this vulnerability by uploading a malicious file on the local file system. A successful exploit could allow the attacker to overwrite arbitrary files on the affected system&nbsp;and gain vmanage user privileges.",2026-02-25 17:25:28.170,CISA
@@ -8954,7 +8955,7 @@ CVE-2026-3584,9.8,0.07239,"The Kali Forms plugin for WordPress is vulnerable to 
 CVE-2026-38360,9.8,0.05982,"Directory Traversal vulnerability in fohrloop dash-uploader v.0.1.0 through v.0.7.0a2 allows a remote attacker to execute arbitrary code via the dash_uploader/httprequesthandler.py, BaseHttpRequestHandler.get_temp_root(), BaseHttpRequestHandler._post() components.",2026-05-08 17:16:30.380,Nuclei
 CVE-2026-38361,7.5,0.02643,"Multiple unauthenticated denial-of-service (DoS) issues in fohrloop dash-uploader v0.1.0 through v0.7.0a2. The chunked-upload handler (dash_uploader/httprequesthandler.py, dash_uploader/upload.py) trusts unsanitized, attacker-controlled upload parameters (e.g. flowTotalChunks) and does not enforce the documented max_file_size limit, allowing a remote, unauthenticated attacker to cause an out-of-memory (OOM) process crash (unbounded range(1, flowTotalChunks + 1) allocation), truncation of the target file to zero bytes (flowTotalChunks=0, where the all([]) == True quirk runs the file-assembly branch on zero chunks), permanent disk exhaustion (never-cleaned-up temporary directories per flowIdentifier), and a complete bypass of the documented max_file_size limit.",2026-05-08 15:16:37.120,Nuclei
 CVE-2026-3844,9.8,0.36512,"The Breeze Cache plugin for WordPress is vulnerable to arbitrary file uploads due to missing file type validation in the 'fetch_gravatar_from_remote' function in all versions up to, and including, 2.4.4. This makes it possible for unauthenticated attackers to upload arbitrary files on the affected site's server which may make remote code execution possible. The vulnerability can only be exploited if ""Host Files Locally - Gravatars"" is enabled, which is disabled by default.",2026-04-23 03:16:17.527,Nuclei
-CVE-2026-3891,9.8,0.02775,"The Pix for WooCommerce plugin for WordPress is vulnerable to arbitrary file uploads due to missing capability check and missing file type validation in the 'lkn_pix_for_woocommerce_c6_save_settings' function in all versions up to, and including, 1.5.0. This makes it possible for unauthenticated attackers to upload arbitrary files on the affected site's server which may make remote code execution possible.",2026-03-13 19:55:10.983,Nuclei
+CVE-2026-3891,9.8,0.02775,"The Pix for WooCommerce plugin for WordPress is vulnerable to arbitrary file uploads due to missing capability check and missing file type validation in the 'lkn_pix_for_woocommerce_c6_save_settings' function in all versions up to, and including, 1.5.0. This makes it possible for unauthenticated attackers to upload arbitrary files on the affected site's server which may make remote code execution possible.",2026-03-13 19:55:10.983,Metasploit/Nuclei
 CVE-2026-3909,8.8,0.01629,Out of bounds write in Skia in Google Chrome prior to 146.0.7680.75 allowed a remote attacker to perform out of bounds memory access via a crafted HTML page. (Chromium security severity: High),2026-03-13 19:55:11.170,CISA
 CVE-2026-3910,8.8,0.02,Inappropriate implementation in V8 in Google Chrome prior to 146.0.7680.75 allowed a remote attacker to execute arbitrary code inside a sandbox via a crafted HTML page. (Chromium security severity: High),2026-03-13 19:55:11.363,CISA
 CVE-2026-39339,9.1,0.01351,"ChurchCRM is an open-source church management system. Prior to 7.1.0, a  critical authentication bypass vulnerability in ChurchCRM's API middleware (ChurchCRM/Slim/Middleware/AuthMiddleware.php) allows unauthenticated attackers to access all protected API endpoints by including ""api/public"" anywhere in the request URL, leading to complete exposure of church member data and system information. This vulnerability is fixed in 7.1.0.",2026-04-07 18:16:45.880,Nuclei
@@ -9074,6 +9075,25 @@ CVE-2026-45321,9.6,0.02342,"On 2026-05-11, between approximately 19:20 and 19:26
 CVE-2026-45397,5.3,0.0075,"Open WebUI is a self-hosted artificial intelligence platform designed to operate entirely offline. Prior to 0.9.5, GET /api/v1/retrieval/ returns live RAG pipeline configuration to any unauthenticated HTTP client. No Authorization header, cookie, or API key is required. Every adjacent endpoint on the same router (/embedding, /config) is correctly guarded by get_admin_user making this a targeted omission. This vulnerability is fixed in 0.9.5.",2026-05-15 21:16:37.730,Nuclei
 CVE-2026-45498,4.0,0.63076,Microsoft Defender Denial of Service Vulnerability,2026-05-20 13:16:36.780,CISA
 CVE-2026-45659,8.8,0.0912,Deserialization of untrusted data in Microsoft Office SharePoint allows an authorized attacker to execute code over a network.,2026-05-22 23:16:56.273,CISA
+CVE-2026-46300,7.8,0.02496,"In the Linux kernel, the following vulnerability has been resolved:
+
+net: skbuff: preserve shared-frag marker during coalescing
+
+skb_try_coalesce() can attach paged frags from @from to @to.  If @from
+has SKBFL_SHARED_FRAG set, the resulting @to skb can contain the same
+externally-owned or page-cache-backed frags, but the shared-frag marker
+is currently lost.
+
+That breaks the invariant relied on by later in-place writers.  In
+particular, ESP input checks skb_has_shared_frag() before deciding
+whether an uncloned nonlinear skb can skip skb_cow_data().  If TCP
+receive coalescing has moved shared frags into an unmarked skb, ESP can
+see skb_has_shared_frag() as false and decrypt in place over page-cache
+backed frags.
+
+Propagate SKBFL_SHARED_FRAG when skb_try_coalesce() transfers paged
+frags.  The tailroom copy path does not need the marker because it copies
+bytes into @to's linear data rather than transferring frag descriptors.",2026-05-23 12:17:02.660,Metasploit
 CVE-2026-4631,9.8,0.142,"Cockpit's remote login feature passes user-supplied hostnames and usernames from the web interface to the SSH client without validation or sanitization. An attacker with network access to the Cockpit web service can craft a single HTTP request to the login endpoint that injects malicious SSH options or shell commands, achieving code execution on the Cockpit host without valid credentials. The injection occurs during the authentication flow before any credential verification takes place, meaning no login is required to exploit the vulnerability.",2026-04-07 17:16:38.010,Nuclei
 CVE-2026-46333,7.1,0.01501,"In the Linux kernel, the following vulnerability has been resolved:
 

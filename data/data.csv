@@ -9258,6 +9258,7 @@ Further, the vulnerability is addressed in the listed patches and family release
 
 We recommend customers promptly apply appropriate updates or upgrade to a patched release if they have not already done so.",2026-07-13 19:17:36.440,Nuclei
 CVE-2026-6973,7.2,0.34454,"An Improper Input Validation in Ivanti EPMM before versions 12.6.1.1, 12.7.0.1, and 12.8.0.1 allows a remotely authenticated user with administrative access to achieve remote code execution.",2026-05-07 16:16:23.163,CISA
+CVE-2026-71209,7.5,0.00663,"audiobookshelf's authentication-exemption check (server/routers/Auth.js) matches unauthenticated-allowed GET routes against req.path via a regex requiring a literal /items/:id/cover or /authors/:id/image shape, where req.path retains %2F sequences URL-encoded. CacheManager.handleCoverCache then joins this decoded value into a cache file path and streams the result before any database-backed ownership check.",2026-08-05 08:16:43.110,Nuclei
 CVE-2026-7473,5.8,0.01108,"On affected platforms running Arista EOS where a tunnel decapsulation configuration—such as VXLAN (Virtual Extensible LAN), decap-groups, or a GRE (Generic Routing Encapsulation) tunnel interface—is present, the switch will incorrectly decapsulate and forward other unexpected tunneled packet with a destination IP matching its configured decapsulation IP. This occurs because the switch does not verify the tunnel protocol type, potentially leading to the unexpected processing of non-configured tunnel traffic.
 
 

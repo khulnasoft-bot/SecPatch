@@ -8330,6 +8330,30 @@ If these machine keys are compromised, attackers could create and send a malicio
 
 
 The risk does not originate from a vulnerability introduced by ScreenConnect, but from platform level behavior.  This had no direct impact to ScreenConnect Client. ScreenConnect 2025.4 patch disables ViewState and removes any dependency on it.",2025-04-25 19:15:49.143,CISA
+CVE-2025-39682,9.8,0.00505,"In the Linux kernel, the following vulnerability has been resolved:
+
+tls: fix handling of zero-length records on the rx_list
+
+Each recvmsg() call must process either
+ - only contiguous DATA records (any number of them)
+ - one non-DATA record
+
+If the next record has different type than what has already been
+processed we break out of the main processing loop. If the record
+has already been decrypted (which may be the case for TLS 1.3 where
+we don't know type until decryption) we queue the pending record
+to the rx_list. Next recvmsg() will pick it up from there.
+
+Queuing the skb to rx_list after zero-copy decrypt is not possible,
+since in that case we decrypted directly to the user space buffer,
+and we don't have an skb to queue (darg.skb points to the ciphertext
+skb for access to metadata like length).
+
+Only data records are allowed zero-copy, and we break the processing
+loop after each non-data record. So we should never zero-copy and
+then find out that the record type has changed. The corner case
+we missed is when the initial record comes from rx_list, and it's
+zero length.",2025-09-05 18:15:44.670,CISA
 CVE-2025-39964,7.8,0.00323,"In the Linux kernel, the following vulnerability has been resolved:
 
 crypto: af_alg - Disallow concurrent writes in af_alg_sendmsg
